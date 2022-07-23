@@ -1,0 +1,83 @@
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .border-bottom {
+    border-bottom: 1px solid #b3b3b3;
+  }
+  
+  .navbar-custom {
+    font-weight: 400;
+    font-size: 16px;
+  }
+  
+  .navbar-nav {
+    padding-left: 0px;
+  }
+  
+  .nav-item {
+    padding-right: 16px;
+  }
+  
+  .navbar-custom .navbar-nav .nav-link {
+    color: #222222;
+  }
+  
+  .navbar-custom .navbar-nav .active-custom {
+    color: #FEC731;
+  }
+  
+  .navbar-custom .navbar-nav .nav-link:hover {
+    color: #fec84b;
+  }
+  
+  .dropdown-item {
+    font-size: 16px;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #fec84b;
+  }
+  
+  .header h3 {
+    padding: 50px;
+    text-align: center;
+    font-size: 30px;
+    color: #333333;
+    font-weight: 500;
+    line-height: 44px;
+  }
+  
+  .update-harga {
+    padding-top: 16px;
+    text-align: center;
+    font-size: 14px;
+    color: #222222;
+    font-weight: 400;
+  }
+  
+  .simulasi {
+    padding-bottom: 36px;
+    color: #222222;
+  }
+
+  p {
+    font-size: 18px;
+    color: #333333;
+    line-height: 28px;
+    font-weight: 400;
+  }
+  
+  .footer {
+    background-color: #333333;
+    height: 64px;
+    padding-top: 16px;
+  }
+  
+  .footer p {
+    color: #bdbdbd;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+    text-align: center;
+  }
