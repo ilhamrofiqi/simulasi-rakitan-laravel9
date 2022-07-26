@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\simulasiController;
+use App\Http\Controllers\socketController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', [simulasiController::class, 'index']);
+
+Route::get('/socket', [socketController::class, 'index']);
+Route::get('/socket/create', [socketController::class, 'create']);
+Route::post('/socket/store', [socketController::class, 'store']);
