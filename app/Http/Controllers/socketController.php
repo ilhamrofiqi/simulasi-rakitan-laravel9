@@ -22,4 +22,24 @@ class socketController extends Controller
         Socket::create($request->except(['_token','submit']));
         return redirect(('/socket'));
     }
+
+    public function edit($id)
+    {
+        $socket = Socket::find($id);
+        return view('socket.edit',compact(['socket']));
+    }
+
+    public function update($id, Request $request)
+    {
+        $socket = Socket::find($id);
+        $socket->update($request->except(['_token','submit']));
+        return redirect('/socket');
+    }
+
+    public function destroy($id)
+    {
+        $socket = Socket::find($id);
+        $socket->delete();
+        return redirect('/socket');
+    }
 }
