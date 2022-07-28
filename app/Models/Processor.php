@@ -9,4 +9,5 @@ class Processor extends Model
 {
     use HasFactory;
     protected $table = 'processor';
+    protected $guarded = [];
 }

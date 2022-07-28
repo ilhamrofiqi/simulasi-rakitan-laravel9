@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\simulasiController;
 use App\Http\Controllers\socketController;
+use App\Http\Controllers\ProcessorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +28,7 @@ Route::post('/socket/store', [socketController::class, 'store']);
 Route::get('/socket/{id}/edit', [socketController::class, 'edit']);
 Route::put('/socket/{id}', [socketController::class, 'update']);
 Route::delete('/socket/{id}', [socketController::class, 'destroy']);
+
+Route::get('/processor', [ProcessorController::class, 'index']);
+Route::get('/processor/create', [ProcessorController::class, 'create']);
+Route::post('/processor/store', [ProcessorController::class, 'store']);
