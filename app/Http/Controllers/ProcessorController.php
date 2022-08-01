@@ -25,4 +25,25 @@ class ProcessorController extends Controller
         Processor::create($request->except(['_token', 'submit']));
         return redirect(('/processor'));
     }
+
+    public function edit($id)
+    {
+        $processor = Processor::find($id);
+        $socket = Socket::all();
+        return view('processor.edit', compact(['processor', 'socket']));
+    }
+
+    public function update($id, Request $request)
+    {
+        $processor = Processor::find($id);
+        $processor->update($request->except(['_token','submit']));
+        return redirect('/processor');
+    }
+
+    public function destroy($id)
+    {
+        $processor = Processor::find($id);
+        $processor->delete();
+        return redirect('/processor');
+    }
 }

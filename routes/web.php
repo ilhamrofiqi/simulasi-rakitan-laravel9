@@ -32,3 +32,6 @@ Route::delete('/socket/{id}', [socketController::class, 'destroy']);
 Route::get('/processor', [ProcessorController::class, 'index']);
 Route::get('/processor/create', [ProcessorController::class, 'create']);
 Route::post('/processor/store', [ProcessorController::class, 'store']);
+Route::get('/processor/{id}/edit', [ProcessorController::class, 'edit']);
+Route::put('/processor/{id}', [ProcessorController::class, 'update']);
+Route::delete('/processor/{id}', [ProcessorController::class, 'destroy']);
