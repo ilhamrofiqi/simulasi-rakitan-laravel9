@@ -9,4 +9,5 @@ class Motherboard extends Model
 {
     use HasFactory;
     protected $table = 'motherboard';
+    protected $guarded = [];
 }
