@@ -26,7 +26,7 @@
             <input type="number" name="harga" class="form-control" id="exampleFormControlInput1" placeholder="Harga (Tanpa titik)">
         </div>
 
-        <input class="btn btn-primary" type="submit" name="submit" value="Tambah Socket">
+        <input class="btn btn-primary" type="submit" name="submit" value="Tambah Processor">
     </form>
 </div>
 

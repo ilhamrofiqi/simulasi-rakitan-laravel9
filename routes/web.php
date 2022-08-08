@@ -41,3 +41,8 @@ Route::delete('/processor/{id}', [ProcessorController::class, 'destroy']);
 
 // Motherboard
 Route::get('/motherboard', [MotherboardController::class, 'index']);
+Route::get('/motherboard/create', [MotherboardController::class, 'create']);
+Route::post('/motherboard/store', [MotherboardController::class, 'store']);
+Route::get('/motherboard/{id}/edit', [MotherboardController::class, 'edit']);
+Route::put('/motherboard/{id}', [MotherboardController::class, 'update']);
+Route::delete('/motherboard/{id}', [MotherboardController::class, 'destroy']);
