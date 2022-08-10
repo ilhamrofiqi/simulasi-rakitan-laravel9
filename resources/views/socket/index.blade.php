@@ -11,14 +11,14 @@
     <table class="table table-hover table-bordered">
         <tr>
             <th>ID</th>
-            <th>BRAND ID</th>
+            <th>BRAND</th>
             <th>NAMA</th>
             <th>Aksi</th>
         </tr>
         @foreach($socket as $s)
         <tr>
             <td>{{$s->id}}</td>
-            <td>{{$s->brand_id}}</td>
+            <td>{{$s->brand['nama']}}</td>
             <td>{{$s->nama}}</td>
             <td>
                 <div class="btn-toolbar" role="toolbar">

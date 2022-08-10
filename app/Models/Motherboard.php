@@ -10,4 +10,9 @@ class Motherboard extends Model
     use HasFactory;
     protected $table = 'motherboard';
     protected $guarded = [];
+
+    public function socket()
+    {
+        return $this->belongsTo(Socket::class);
+    }
 }

@@ -10,4 +10,9 @@ class Processor extends Model
     use HasFactory;
     protected $table = 'processor';
     protected $guarded = [];
+
+    public function socket()
+    {
+        return $this->belongsTo(Socket::class);
+    }
 }

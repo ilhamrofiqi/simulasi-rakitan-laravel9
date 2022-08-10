@@ -11,7 +11,7 @@
     <table class="table table-hover table-bordered">
         <tr>
             <th>ID</th>
-            <th>SOCKET ID</th>
+            <th>SOCKET</th>
             <th>NAMA</th>
             <th>HARGA</th>
             <th>Aksi</th>
@@ -19,7 +19,7 @@
         @foreach($processor as $item)
         <tr>
             <td>{{$item->id}}</td>
-            <td>{{$item->socket_id}}</td>
+            <td>{{$item->socket['nama']}}</td>
             <td>{{$item->nama}}</td>
             <td>{{$item->harga}}</td>
             <td>
