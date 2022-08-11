@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\HardiskController;
 use App\Http\Controllers\MotherboardController;
 use App\Http\Controllers\simulasiController;
 use App\Http\Controllers\socketController;
 use App\Http\Controllers\ProcessorController;
+use App\Models\Hardisk;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,3 +48,11 @@ Route::post('/motherboard/store', [MotherboardController::class, 'store']);
 Route::get('/motherboard/{id}/edit', [MotherboardController::class, 'edit']);
 Route::put('/motherboard/{id}', [MotherboardController::class, 'update']);
 Route::delete('/motherboard/{id}', [MotherboardController::class, 'destroy']);
+
+// Hardisk
+Route::get('/hardisk', [HardiskController::class, 'index']);
+Route::get('/hardisk/create', [HardiskController::class, 'create']);
+Route::post('/hardisk/store', [HardiskController::class, 'store']);
+Route::get('/hardisk/{id}/edit', [HardiskController::class, 'edit']);
+Route::put('/hardisk/{id}', [HardiskController::class, 'update']);
+Route::delete('/hardisk/{id}', [HardiskController::class, 'destroy']);
