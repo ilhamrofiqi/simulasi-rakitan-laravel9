@@ -2,11 +2,12 @@
 
 @section('content')
 
-<div class="header">
-    <h3>Data Socket</h3>
-</div>
 
-<div class="container custom">
+
+<div class="container mb-5">
+    <div class="header">
+        <h3>Data Socket</h3>
+    </div>
     <a type="button" class="btn btn-primary mb-3" href="socket/create">Tambah Socket</a>
     <table class="table table-hover table-bordered">
         <tr>
@@ -27,7 +28,7 @@
                     </div>
                     <div class="btn-group me-2" role="group" aria-label="Basic mixed styles example">
                         <form action="/socket/{{$s->id}}" method="POST">
-                            @csrf 
+                            @csrf
                             @method('delete')
                             <input type="submit" class="btn btn-outline-danger" value="Delete">
                         </form>

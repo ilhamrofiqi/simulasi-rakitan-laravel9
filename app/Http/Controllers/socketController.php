@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class socketController extends Controller
 {
     public function index() {
-        $socket = Socket::all();
+        // relasi dengan eager loading, memanggil nama relasi dari controller dan menampilkan data di interface
+        $socket = Socket::with('brand')->get();
         return view('socket.index', compact(['socket']));
     }
 

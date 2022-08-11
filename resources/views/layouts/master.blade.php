@@ -21,7 +21,7 @@
     <title>Simulasi Rakitan OneIT</title>
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom navbar-custom">
         <div class="container">
@@ -67,7 +67,7 @@
 
     @yield('content')
 
-    <footer class="footer">
+    <footer class="footer mt-auto py-3">
         <div class="container">
             <div>
                 <p class="text-center">One IT Solution © 2021</p>

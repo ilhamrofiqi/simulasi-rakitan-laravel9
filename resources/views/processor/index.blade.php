@@ -2,11 +2,10 @@
 
 @section('content')
 
-<div class="header">
-    <h3>Data Processor</h3>
-</div>
-
-<div class="container custom">
+<div class="container mb-5">
+    <div class="header">
+        <h3>Data Processor</h3>
+    </div>
     <a type="button" class="btn btn-primary mb-3" href="processor/create">Tambah Processor</a>
     <table class="table table-hover table-bordered">
         <tr>
@@ -18,7 +17,7 @@
         </tr>
         @foreach($processor as $item)
         <tr>
-            <td>{{$item->id}}</td>
+            <td>{{$loop->iteration}}</td>
             <td>{{$item->socket['nama']}}</td>
             <td>{{$item->nama}}</td>
             <td>{{$item->harga}}</td>
@@ -29,7 +28,7 @@
                     </div>
                     <div class="btn-group me-2" role="group" aria-label="Basic mixed styles example">
                         <form action="/processor/{{$item->id}}" method="POST">
-                            @csrf 
+                            @csrf
                             @method('delete')
                             <input type="submit" class="btn btn-outline-danger" value="Delete">
                         </form>

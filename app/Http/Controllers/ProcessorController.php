@@ -10,7 +10,7 @@ class ProcessorController extends Controller
 {
     public function index()
     {
-        $processor = Processor::all();
+        $processor = Processor::with('socket')->get();
         return view('processor.index', compact(['processor']));
     }
 

@@ -11,6 +11,8 @@ class Motherboard extends Model
     protected $table = 'motherboard';
     protected $guarded = [];
 
+
+    // Relasi dengan lazy loading, tanpa melalui controller dan langsung memanggil data ke interface
     public function socket()
     {
         return $this->belongsTo(Socket::class);

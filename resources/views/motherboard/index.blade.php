@@ -1,11 +1,11 @@
 @extends('layouts.master')
 @section('content')
 
-<div class="header">
-    <h3>Data Motherboard</h3>
-</div>
 
-<div class="container custom">
+<div class="container mb-5">
+    <div class="header">
+        <h3>Data Motherboard</h3>
+    </div>
     <a href="motherboard/create" type="button" class="btn btn-primary mb-3">Tambah Motherboard</a>
     <table class="table table-hover table-bordered">
         <tr>
@@ -17,7 +17,7 @@
         </tr>
         @foreach($motherboard as $item)
         <tr>
-            <td>{{$item->id}}</td>
+            <td>{{$loop->iteration}}</td>
             <td>{{$item->socket['nama']}}</td>
             <td>{{$item->nama}}</td>
             <td>{{$item->harga}}</td>
