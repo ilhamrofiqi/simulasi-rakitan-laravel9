@@ -5,7 +5,9 @@ use App\Http\Controllers\MotherboardController;
 use App\Http\Controllers\simulasiController;
 use App\Http\Controllers\socketController;
 use App\Http\Controllers\ProcessorController;
+use App\Http\Controllers\RamController;
 use App\Models\Hardisk;
+use App\Models\Ram;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -56,3 +58,11 @@ Route::post('/hardisk/store', [HardiskController::class, 'store']);
 Route::get('/hardisk/{id}/edit', [HardiskController::class, 'edit']);
 Route::put('/hardisk/{id}', [HardiskController::class, 'update']);
 Route::delete('/hardisk/{id}', [HardiskController::class, 'destroy']);
+
+// RAM
+Route::get('/ram', [RamController::class, 'index']);
+Route::get('/ram/create', [RamController::class, 'create']);
+Route::post('/ram/store', [RamController::class, 'store']);
+Route::get('/ram/{id}/edit', [RamController::class, 'edit']);
+Route::put('/ram/{id}', [RamController::class, 'update']);
+Route::delete('/ram/{id}', [RamController::class, 'destroy']);

@@ -152,6 +152,41 @@
                 </div>
             </div>
 
+            <!-- RAM -->
+            <div class="row">
+                <div class="col-md-2">
+                    <p class="text-left">RAM</p>
+                </div>
+                <div class="col-sm-7 kolom">
+                    <select class="form-control" name="n4" id="s4"
+                        onchange="updateHargax(this,document.getElementById('q4'),document.getElementById('p4'),document.getElementById('nex4'))">
+                        <option value="0" selected>Pilih RAM</option>
+                        @foreach($ram as $item)
+                        <option value="{{$item->harga}}">{{$item->nama}}</option>
+                        @endforeach
+                    </select>
+                    <input name="name4" id="nex4" type="hidden" value="0">
+                </div>
+                <div class="col-md-1 kolom">
+                    <select class="form-control" name="qty4" id="q4"
+                        onchange="updateHarga(this.value, document.getElementById('s4'),document.getElementById('p4'))">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+                <div class="col-md-2 kolom">
+                    <input id="p4" class="form-control" type="text" value="0"
+                        style="text-align:right; font-size: medium;" disabled="">
+                </div>
+            </div>
+
         </div>
 
     </div>
