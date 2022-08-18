@@ -6,6 +6,7 @@ use App\Http\Controllers\simulasiController;
 use App\Http\Controllers\socketController;
 use App\Http\Controllers\ProcessorController;
 use App\Http\Controllers\RamController;
+use App\Http\Controllers\SsdController;
 use App\Models\Hardisk;
 use App\Models\Ram;
 use Illuminate\Support\Facades\Route;
@@ -66,3 +67,11 @@ Route::post('/ram/store', [RamController::class, 'store']);
 Route::get('/ram/{id}/edit', [RamController::class, 'edit']);
 Route::put('/ram/{id}', [RamController::class, 'update']);
 Route::delete('/ram/{id}', [RamController::class, 'destroy']);
+
+// SSD
+Route::get('/ssd', [SsdController::class, 'index']);
+Route::get('/ssd/create', [SsdController::class, 'create']);
+Route::post('/ssd/store', [SsdController::class, 'store']);
+Route::get('/ssd/{id}/edit', [SsdController::class, 'edit']);
+Route::put('/ssd/{id}', [SsdController::class, 'update']);
+Route::delete('/ssd/{id}', [SsdController::class, 'destroy']);

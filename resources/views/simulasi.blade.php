@@ -187,6 +187,41 @@
                 </div>
             </div>
 
+            <!-- SSD -->
+            <div class="row">
+                <div class="col-md-2">
+                    <p class="text-left">SSD</p>
+                </div>
+                <div class="col-sm-7 kolom">
+                    <select class="form-control" name="n5" id="s5"
+                        onchange="updateHargax(this,document.getElementById('q5'),document.getElementById('p5'),document.getElementById('nex5'))">
+                        <option value="0" selected>Pilih SSD</option>
+                        @foreach($ssd as $item)
+                        <option value="{{$item->harga}}">{{$item->nama}}</option>
+                        @endforeach
+                    </select>
+                    <input name="name5" id="nex5" type="hidden" value="0">
+                </div>
+                <div class="col-md-1 kolom">
+                    <select class="form-control" name="qty5" id="q5"
+                        onchange="updateHarga(this.value, document.getElementById('s5'),document.getElementById('p5'))">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+                <div class="col-md-2 kolom">
+                    <input id="p5" class="form-control" type="text" value="0"
+                        style="text-align:right; font-size: medium;" disabled="">
+                </div>
+            </div>
+
         </div>
 
     </div>

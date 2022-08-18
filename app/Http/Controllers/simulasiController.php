@@ -9,6 +9,7 @@ use App\Models\Socket;
 use App\Models\Processor;
 use App\Models\Motherboard;
 use App\Models\Ram;
+use App\Models\Ssd;
 
 class simulasiController extends Controller
 {
@@ -19,8 +20,10 @@ class simulasiController extends Controller
         $motherboard = Motherboard::all();
         $hardisk = Hardisk::all();
         $ram = Ram::all();
+        $ssd = Ssd::all();
 
         return view('simulasi',compact(
-            ['brand', 'socket', 'processor', 'motherboard', 'hardisk', 'ram']));
+            ['brand', 'socket', 'processor', 'motherboard', 'hardisk', 'ram',
+            'ssd']));
     }
 }
