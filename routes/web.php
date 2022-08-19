@@ -7,8 +7,7 @@ use App\Http\Controllers\socketController;
 use App\Http\Controllers\ProcessorController;
 use App\Http\Controllers\RamController;
 use App\Http\Controllers\SsdController;
-use App\Models\Hardisk;
-use App\Models\Ram;
+use App\Http\Controllers\VgaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -75,3 +74,12 @@ Route::post('/ssd/store', [SsdController::class, 'store']);
 Route::get('/ssd/{id}/edit', [SsdController::class, 'edit']);
 Route::put('/ssd/{id}', [SsdController::class, 'update']);
 Route::delete('/ssd/{id}', [SsdController::class, 'destroy']);
+
+// VGA
+Route::get('/vga', [VgaController::class, 'index']);
+Route::get('/vga/create', [VgaController::class, 'create']);
+Route::post('/vga/store', [VgaController::class, 'store']);
+Route::get('/vga/{id}/edit', [VgaController::class, 'edit']);
+Route::put('/vga/{id}', [VgaController::class, 'update']);
+Route::delete('/vga/{id}', [VgaController::class, 'destroy']);
+
