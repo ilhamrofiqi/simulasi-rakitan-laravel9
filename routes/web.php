@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CasingController;
 use App\Http\Controllers\HardiskController;
+use App\Http\Controllers\KeyboardController;
 use App\Http\Controllers\MotherboardController;
 use App\Http\Controllers\PowerSupplyController;
 use App\Http\Controllers\simulasiController;
@@ -100,4 +101,12 @@ Route::post('/casing/store', [CasingController::class, 'store']);
 Route::get('casing/{id}/edit', [CasingController::class, 'edit']);
 Route::put('/casing/{id}', [CasingController::class, 'update']);
 Route::delete('/casing/{id}', [CasingController::class, 'destroy']);
+
+// Keyboard
+Route::get('/keyboard', [KeyboardController::class, 'index']);
+Route::get('/keyboard/create', [KeyboardController::class, 'create']);
+Route::post('/keyboard/store', [KeyboardController::class, 'store']);
+Route::get('/keyboard/{id}/edit', [KeyboardController::class, 'edit']);
+Route::put('/keyboard/{id}', [KeyboardController::class, 'update']);
+Route::delete('/keyboard/{id}', [KeyboardController::class, 'destroy']);
 
