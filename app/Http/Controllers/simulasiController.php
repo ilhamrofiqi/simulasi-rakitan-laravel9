@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Brand;
+use App\Models\Casing;
 use App\Models\Hardisk;
 use App\Models\Socket;
 use App\Models\Processor;
@@ -25,9 +26,10 @@ class simulasiController extends Controller
         $ssd = Ssd::all();
         $vga = Vga::all();
         $psu = PowerSupply::all();
+        $casing = Casing::all();
 
         return view('simulasi',compact(
             ['brand', 'socket', 'processor', 'motherboard', 'hardisk', 'ram',
-            'ssd', 'vga', 'psu']));
+            'ssd', 'vga', 'psu', 'casing']));
     }
 }

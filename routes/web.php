@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CasingController;
 use App\Http\Controllers\HardiskController;
 use App\Http\Controllers\MotherboardController;
 use App\Http\Controllers\PowerSupplyController;
@@ -91,4 +92,12 @@ Route::post('/psu/store', [PowerSupplyController::class, 'store']);
 Route::get('/psu/{id}/edit', [PowerSupplyController::class, 'edit']);
 Route::put('/psu/{id}', [PowerSupplyController::class, 'update']);
 Route::delete('/psu/{id}', [PowerSupplyController::class, 'destroy']);
+
+// Casing
+Route::get('/casing', [CasingController::class, 'index']);
+Route::get('/casing/create', [CasingController::class, 'create']);
+Route::post('/casing/store', [CasingController::class, 'store']);
+Route::get('casing/{id}/edit', [CasingController::class, 'edit']);
+Route::put('/casing/{id}', [CasingController::class, 'update']);
+Route::delete('/casing/{id}', [CasingController::class, 'destroy']);
 

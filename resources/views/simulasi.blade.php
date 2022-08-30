@@ -270,7 +270,7 @@
                         <option value="{{$item->harga}}">{{$item->nama}}</option>
                         @endforeach
                     </select>
-                    <input name="name6" id="nex6" type="hidden" value="0">
+                    <input name="name7" id="nex7" type="hidden" value="0">
                 </div>
                 <div class="col-md-1 kolom">
                     <select class="form-control" name="qty7" id="q7"
@@ -293,6 +293,39 @@
             </div>
 
             <!-- Casing -->
+            <div class="row">
+                <div class="col-md-2">
+                    <p class="text-left">Casing</p>
+                </div>
+                <div class="col-sm-7 kolom">
+                    <select class="form-control" name="n8" id="s8"
+                        onchange="updateHargax(this,document.getElementById('q8'),document.getElementById('p8'),document.getElementById('nex8'))">
+                        <option value="0" selected>Pilih Casing</option>
+                        @foreach($casing as $item)
+                        <option value="{{$item->harga}}">{{$item->nama}}</option>
+                        @endforeach
+                    </select>
+                    <input name="name8" id="nex8" type="hidden" value="0">
+                </div>
+                <div class="col-md-1 kolom">
+                    <select class="form-control" name="qty8" id="q8"
+                        onchange="updateHarga(this.value, document.getElementById('s8'),document.getElementById('p8'))">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+                <div class="col-md-2 kolom">
+                    <input id="p8" class="form-control" type="text" value="0"
+                        style="text-align:right; font-size: medium;" disabled="">
+                </div>
+            </div>
 
             <!-- Keyboard -->
 
