@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HardiskController;
 use App\Http\Controllers\MotherboardController;
+use App\Http\Controllers\PowerSupplyController;
 use App\Http\Controllers\simulasiController;
 use App\Http\Controllers\socketController;
 use App\Http\Controllers\ProcessorController;
@@ -82,4 +83,12 @@ Route::post('/vga/store', [VgaController::class, 'store']);
 Route::get('/vga/{id}/edit', [VgaController::class, 'edit']);
 Route::put('/vga/{id}', [VgaController::class, 'update']);
 Route::delete('/vga/{id}', [VgaController::class, 'destroy']);
+
+// PSU
+Route::get('/psu', [PowerSupplyController::class, 'index']);
+Route::get('/psu/create', [PowerSupplyController::class, 'create']);
+Route::post('/psu/store', [PowerSupplyController::class, 'store']);
+Route::get('/psu/{id}/edit', [PowerSupplyController::class, 'edit']);
+Route::put('/psu/{id}', [PowerSupplyController::class, 'update']);
+Route::delete('/psu/{id}', [PowerSupplyController::class, 'destroy']);
 

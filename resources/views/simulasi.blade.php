@@ -257,6 +257,47 @@
                 </div>
             </div>
 
+            <!-- Power Supply -->
+            <div class="row">
+                <div class="col-md-2">
+                    <p class="text-left">Power Supply</p>
+                </div>
+                <div class="col-sm-7 kolom">
+                    <select class="form-control" name="n7" id="s7"
+                        onchange="updateHargax(this,document.getElementById('q7'),document.getElementById('p7'),document.getElementById('nex7'))">
+                        <option value="0" selected>Pilih Power Supply</option>
+                        @foreach($psu as $item)
+                        <option value="{{$item->harga}}">{{$item->nama}}</option>
+                        @endforeach
+                    </select>
+                    <input name="name6" id="nex6" type="hidden" value="0">
+                </div>
+                <div class="col-md-1 kolom">
+                    <select class="form-control" name="qty7" id="q7"
+                        onchange="updateHarga(this.value, document.getElementById('s7'),document.getElementById('p7'))">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+                <div class="col-md-2 kolom">
+                    <input id="p7" class="form-control" type="text" value="0"
+                        style="text-align:right; font-size: medium;" disabled="">
+                </div>
+            </div>
+
+            <!-- Casing -->
+
+            <!-- Keyboard -->
+
+        
+<!-- end section -->
         </div>
     </div>
 </div>

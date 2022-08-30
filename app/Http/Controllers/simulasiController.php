@@ -8,6 +8,7 @@ use App\Models\Hardisk;
 use App\Models\Socket;
 use App\Models\Processor;
 use App\Models\Motherboard;
+use App\Models\PowerSupply;
 use App\Models\Ram;
 use App\Models\Ssd;
 use App\Models\Vga;
@@ -23,9 +24,10 @@ class simulasiController extends Controller
         $ram = Ram::all();
         $ssd = Ssd::all();
         $vga = Vga::all();
+        $psu = PowerSupply::all();
 
         return view('simulasi',compact(
             ['brand', 'socket', 'processor', 'motherboard', 'hardisk', 'ram',
-            'ssd', 'vga']));
+            'ssd', 'vga', 'psu']));
     }
 }
