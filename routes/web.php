@@ -4,6 +4,7 @@ use App\Http\Controllers\CasingController;
 use App\Http\Controllers\HardiskController;
 use App\Http\Controllers\KeyboardController;
 use App\Http\Controllers\MotherboardController;
+use App\Http\Controllers\MouseController;
 use App\Http\Controllers\PowerSupplyController;
 use App\Http\Controllers\simulasiController;
 use App\Http\Controllers\socketController;
@@ -109,4 +110,12 @@ Route::post('/keyboard/store', [KeyboardController::class, 'store']);
 Route::get('/keyboard/{id}/edit', [KeyboardController::class, 'edit']);
 Route::put('/keyboard/{id}', [KeyboardController::class, 'update']);
 Route::delete('/keyboard/{id}', [KeyboardController::class, 'destroy']);
+
+// Mouse
+Route::get('/mouse', [MouseController::class, 'index']);
+Route::get('/mouse/create', [MouseController::class, 'create']);
+Route::post('/mouse/store', [MouseController::class, 'store']);
+Route::get('/mouse/{id}/edit', [MouseController::class, 'edit']);
+Route::put('/mouse/{id}', [MouseController::class, 'update']);
+Route::delete('/mouse/{id}', [MouseController::class, 'destroy']);
 
