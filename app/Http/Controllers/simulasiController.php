@@ -7,6 +7,7 @@ use App\Models\Brand;
 use App\Models\Casing;
 use App\Models\Hardisk;
 use App\Models\Keyboard;
+use App\Models\Monitor;
 use App\Models\Socket;
 use App\Models\Processor;
 use App\Models\Motherboard;
@@ -31,9 +32,10 @@ class simulasiController extends Controller
         $casing = Casing::all();
         $keyboard = Keyboard::all();
         $mouse = Mouse::all();
+        $monitor = Monitor::all();
 
         return view('simulasi',compact(
             ['brand', 'socket', 'processor', 'motherboard', 'hardisk', 'ram',
-            'ssd', 'vga', 'psu', 'casing', 'keyboard', 'mouse']));
+            'ssd', 'vga', 'psu', 'casing', 'keyboard', 'mouse', 'monitor' ]));
     }
 }

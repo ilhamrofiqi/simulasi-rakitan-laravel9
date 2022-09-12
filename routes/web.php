@@ -3,6 +3,7 @@
 use App\Http\Controllers\CasingController;
 use App\Http\Controllers\HardiskController;
 use App\Http\Controllers\KeyboardController;
+use App\Http\Controllers\MonitorController;
 use App\Http\Controllers\MotherboardController;
 use App\Http\Controllers\MouseController;
 use App\Http\Controllers\PowerSupplyController;
@@ -118,4 +119,12 @@ Route::post('/mouse/store', [MouseController::class, 'store']);
 Route::get('/mouse/{id}/edit', [MouseController::class, 'edit']);
 Route::put('/mouse/{id}', [MouseController::class, 'update']);
 Route::delete('/mouse/{id}', [MouseController::class, 'destroy']);
+
+// Monitor
+Route::get('/monitor', [MonitorController::class, 'index']);
+Route::get('/monitor/create', [MonitorController::class, 'create']);
+Route::post('/monitor/store', [MonitorController::class, 'store']);
+Route::get('/monitor/{id}/edit', [MonitorController::class, 'edit']);
+Route::put('/monitor/{id}', [MonitorController::class, 'update']);
+Route::delete('/monitor/{id}', [MonitorController::class, 'destroy']);
 

@@ -398,6 +398,40 @@
             </div>
 
             <!-- Monitor -->
+            <div class="row">
+                <div class="col-md-2">
+                    <p class="text-left">Monitor</p>
+                </div>
+                <div class="col-sm-7 kolom">
+                    <select class="form-control" name="n11" id="s11"
+                        onchange="updateHargax(this,document.getElementById('q11'),document.getElementById('p11'),document.getElementById('nex11'))">
+                        <option value="0" selected>Pilih Monitor</option>
+                        @foreach($monitor as $item)
+                        <option value="{{$item->harga}}">{{$item->nama}}</option>
+                        @endforeach
+                    </select>
+                    <input name="name11" id="nex11" type="hidden" value="0">
+                </div>
+                <div class="col-md-1 kolom">
+                    <select class="form-control" name="qty11" id="q11"
+                        onchange="updateHarga(this.value, document.getElementById('s11'),document.getElementById('p11'))">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+                <div class="col-md-2 kolom">
+                    <input id="p11" class="form-control" type="text" value="0"
+                        style="text-align:right; font-size: medium;" disabled="">
+                </div>
+            </div>
+
             <!-- CPU Cooler -->
             <!-- Fan -->
             <!-- UPS -->
