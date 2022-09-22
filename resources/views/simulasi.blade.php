@@ -468,6 +468,40 @@
             </div>
 
             <!-- Fan -->
+            <div class="row">
+                <div class="col-md-2">
+                    <p class="text-left">Fan</p>
+                </div>
+                <div class="col-sm-7 kolom">
+                    <select class="form-control" name="n13" id="s13"
+                        onchange="updateHargax(this,document.getElementById('q13'),document.getElementById('p13'),document.getElementById('nex13'))">
+                        <option value="0" selected>Pilih Fan</option>
+                        @foreach($fan as $item)
+                        <option value="{{$item->harga}}">{{$item->nama}}</option>
+                        @endforeach
+                    </select>
+                    <input name="name13" id="nex13" type="hidden" value="0">
+                </div>
+                <div class="col-md-1 kolom">
+                    <select class="form-control" name="qty13" id="q13"
+                        onchange="updateHarga(this.value, document.getElementById('s13'),document.getElementById('p13'))">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+                <div class="col-md-2 kolom">
+                    <input id="p13" class="form-control" type="text" value="0"
+                        style="text-align:right; font-size: medium;" disabled="">
+                </div>
+            </div>
+
             <!-- UPS -->
             <!-- Headset -->
 

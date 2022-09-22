@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CasingController;
 use App\Http\Controllers\CpucoolerController;
+use App\Http\Controllers\FanController;
 use App\Http\Controllers\HardiskController;
 use App\Http\Controllers\KeyboardController;
 use App\Http\Controllers\MonitorController;
@@ -14,6 +15,7 @@ use App\Http\Controllers\ProcessorController;
 use App\Http\Controllers\RamController;
 use App\Http\Controllers\SsdController;
 use App\Http\Controllers\VgaController;
+use App\Models\Fan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -136,4 +138,12 @@ Route::post('/cpucooler/store', [CpucoolerController::class, 'store']);
 Route::get('/cpucooler/{id}/edit', [CpucoolerController::class, 'edit']);
 Route::put('/cpucooler/{id}', [CpucoolerController::class, 'update']);
 Route::delete('/cpucooler/{id}', [CpucoolerController::class, 'destroy']);
+
+// Fan
+Route::get('/fan', [FanController::class, 'index']);
+Route::get('/fan/create', [FanController::class, 'create']);
+Route::post('/fan/store', [FanController::class, 'store']);
+Route::get('/fan/{id}/edit', [FanController::class, 'edit']);
+Route::put('/fan/{id}', [FanController::class, 'update']);
+Route::delete('fan/{id}', [FanController::class, 'destroy']);
 
