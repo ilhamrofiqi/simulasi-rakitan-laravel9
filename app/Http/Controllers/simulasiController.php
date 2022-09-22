@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Brand;
 use App\Models\Casing;
+use App\Models\CpuCooler;
 use App\Models\Hardisk;
 use App\Models\Keyboard;
 use App\Models\Monitor;
@@ -33,9 +34,11 @@ class simulasiController extends Controller
         $keyboard = Keyboard::all();
         $mouse = Mouse::all();
         $monitor = Monitor::all();
+        $cpucooler = CpuCooler::all();
 
         return view('simulasi',compact(
             ['brand', 'socket', 'processor', 'motherboard', 'hardisk', 'ram',
-            'ssd', 'vga', 'psu', 'casing', 'keyboard', 'mouse', 'monitor' ]));
+            'ssd', 'vga', 'psu', 'casing', 'keyboard', 'mouse', 'monitor',
+            'cpucooler' ]));
     }
 }

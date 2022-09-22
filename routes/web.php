@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CasingController;
+use App\Http\Controllers\CpucoolerController;
 use App\Http\Controllers\HardiskController;
 use App\Http\Controllers\KeyboardController;
 use App\Http\Controllers\MonitorController;
@@ -127,4 +128,12 @@ Route::post('/monitor/store', [MonitorController::class, 'store']);
 Route::get('/monitor/{id}/edit', [MonitorController::class, 'edit']);
 Route::put('/monitor/{id}', [MonitorController::class, 'update']);
 Route::delete('/monitor/{id}', [MonitorController::class, 'destroy']);
+
+// CPU Cooler
+Route::get('/cpucooler', [CpucoolerController::class, 'index']);
+Route::get('/cpucooler/create', [CpucoolerController::class, 'create']);
+Route::post('/cpucooler/store', [CpucoolerController::class, 'store']);
+Route::get('/cpucooler/{id}/edit', [CpucoolerController::class, 'edit']);
+Route::put('/cpucooler/{id}', [CpucoolerController::class, 'update']);
+Route::delete('/cpucooler/{id}', [CpucoolerController::class, 'destroy']);
 

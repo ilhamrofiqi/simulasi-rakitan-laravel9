@@ -433,6 +433,40 @@
             </div>
 
             <!-- CPU Cooler -->
+            <div class="row">
+                <div class="col-md-2">
+                    <p class="text-left">CPU Cooler</p>
+                </div>
+                <div class="col-sm-7 kolom">
+                    <select class="form-control" name="n12" id="s12"
+                        onchange="updateHargax(this,document.getElementById('q12'),document.getElementById('p12'),document.getElementById('nex12'))">
+                        <option value="0" selected>Pilih CPU Cooler</option>
+                        @foreach($cpucooler as $item)
+                        <option value="{{$item->harga}}">{{$item->nama}}</option>
+                        @endforeach
+                    </select>
+                    <input name="name12" id="nex12" type="hidden" value="0">
+                </div>
+                <div class="col-md-1 kolom">
+                    <select class="form-control" name="qty12" id="q12"
+                        onchange="updateHarga(this.value, document.getElementById('s12'),document.getElementById('p12'))">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+                <div class="col-md-2 kolom">
+                    <input id="p12" class="form-control" type="text" value="0"
+                        style="text-align:right; font-size: medium;" disabled="">
+                </div>
+            </div>
+
             <!-- Fan -->
             <!-- UPS -->
             <!-- Headset -->
