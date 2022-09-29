@@ -503,6 +503,40 @@
             </div>
 
             <!-- UPS -->
+            <div class="row">
+                <div class="col-md-2">
+                    <p class="text-left">UPS</p>
+                </div>
+                <div class="col-sm-7 kolom">
+                    <select class="form-control" name="n14" id="s14"
+                        onchange="updateHargax(this,document.getElementById('q14'),document.getElementById('p14'),document.getElementById('nex14'))">
+                        <option value="0" selected>Pilih UPS</option>
+                        @foreach($ups as $item)
+                        <option value="{{$item->harga}}">{{$item->nama}}</option>
+                        @endforeach
+                    </select>
+                    <input name="name14" id="nex14" type="hidden" value="0">
+                </div>
+                <div class="col-md-1 kolom">
+                    <select class="form-control" name="qty14" id="q14"
+                        onchange="updateHarga(this.value, document.getElementById('s14'),document.getElementById('p14'))">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+                <div class="col-md-2 kolom">
+                    <input id="p14" class="form-control" type="text" value="0"
+                        style="text-align:right; font-size: medium;" disabled="">
+                </div>
+            </div>
+
             <!-- Headset -->
 
         

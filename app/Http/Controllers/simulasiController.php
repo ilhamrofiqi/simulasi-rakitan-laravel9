@@ -18,6 +18,7 @@ use App\Models\Ram;
 use App\Models\Ssd;
 use App\Models\Vga;
 use App\Models\Fan;
+use App\Models\Ups;
 
 class simulasiController extends Controller
 {
@@ -37,10 +38,11 @@ class simulasiController extends Controller
         $monitor = Monitor::all();
         $cpucooler = CpuCooler::all();
         $fan = Fan::all();
+        $ups = Ups::all();
 
         return view('simulasi',compact(
             ['brand', 'socket', 'processor', 'motherboard', 'hardisk', 'ram',
             'ssd', 'vga', 'psu', 'casing', 'keyboard', 'mouse', 'monitor',
-            'cpucooler', 'fan' ]));
+            'cpucooler', 'fan', 'ups' ]));
     }
 }

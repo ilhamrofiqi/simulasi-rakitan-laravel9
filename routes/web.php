@@ -14,6 +14,7 @@ use App\Http\Controllers\socketController;
 use App\Http\Controllers\ProcessorController;
 use App\Http\Controllers\RamController;
 use App\Http\Controllers\SsdController;
+use App\Http\Controllers\UpsController;
 use App\Http\Controllers\VgaController;
 use App\Models\Fan;
 use Illuminate\Support\Facades\Route;
@@ -147,3 +148,10 @@ Route::get('/fan/{id}/edit', [FanController::class, 'edit']);
 Route::put('/fan/{id}', [FanController::class, 'update']);
 Route::delete('fan/{id}', [FanController::class, 'destroy']);
 
+// UPS
+Route::get('/ups', [UpsController::class, 'index']);
+Route::get('/ups/create', [UpsController::class, 'create']);
+Route::post('/ups/store', [UpsController::class, 'store']);
+Route::get('/ups/{id}/edit', [UpsController::class, 'edit']);
+Route::put('/ups/{id}', [UpsController::class, 'update']);
+Route::delete('ups/{id}', [UpsController::class, 'destroy']);
