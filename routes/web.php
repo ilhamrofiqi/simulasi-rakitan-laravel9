@@ -4,6 +4,7 @@ use App\Http\Controllers\CasingController;
 use App\Http\Controllers\CpucoolerController;
 use App\Http\Controllers\FanController;
 use App\Http\Controllers\HardiskController;
+use App\Http\Controllers\HeadsetController;
 use App\Http\Controllers\KeyboardController;
 use App\Http\Controllers\MonitorController;
 use App\Http\Controllers\MotherboardController;
@@ -155,3 +156,11 @@ Route::post('/ups/store', [UpsController::class, 'store']);
 Route::get('/ups/{id}/edit', [UpsController::class, 'edit']);
 Route::put('/ups/{id}', [UpsController::class, 'update']);
 Route::delete('ups/{id}', [UpsController::class, 'destroy']);
+
+// Headset
+Route::get('/headset', [HeadsetController::class, 'index']);
+Route::get('/headset/create', [HeadsetController::class, 'create']);
+Route::post('/headset/store', [HeadsetController::class, 'store']);
+Route::get('/headset/{id}/edit', [HeadsetController::class, 'edit']);
+Route::put('/headset/{id}', [HeadsetController::class, 'update']);
+Route::delete('headset/{id}', [HeadsetController::class, 'destroy']);
